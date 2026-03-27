@@ -15,8 +15,9 @@
     --popover: 215 20% 12%;
     --popover-foreground: 210 15% 88%;
 
-    --primary: 210 12% 55%;
-    --primary-foreground: 215 20% 8%;
+    /* CHANGEMENT : Electric Indigo #7C3AED (en HSL) */
+    --primary: 258 75% 59%; 
+    --primary-foreground: 210 15% 98%;
 
     --secondary: 215 18% 16%;
     --secondary-foreground: 210 15% 88%;
@@ -24,29 +25,31 @@
     --muted: 215 18% 16%;
     --muted-foreground: 210 10% 42%;
 
-    --accent: 210 12% 55%;
-    --accent-foreground: 215 20% 8%;
+    --accent: 258 75% 59%;
+    --accent-foreground: 210 15% 98%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 215 20% 18%;
     --input: 215 20% 18%;
-    --ring: 210 12% 55%;
+    --ring: 258 75% 59%;
 
     --radius: 0.5rem;
 
+    /* Sidebar & Glows */
     --sidebar-background: 215 20% 8%;
     --sidebar-foreground: 210 15% 88%;
-    --sidebar-primary: 210 12% 55%;
-    --sidebar-primary-foreground: 215 20% 8%;
+    --sidebar-primary: 258 75% 59%;
+    --sidebar-primary-foreground: 210 15% 98%;
     --sidebar-accent: 215 18% 16%;
     --sidebar-accent-foreground: 210 15% 88%;
     --sidebar-border: 215 20% 18%;
-    --sidebar-ring: 210 12% 55%;
+    --sidebar-ring: 258 75% 59%;
 
-    --glow-primary: 0 0 20px hsl(210 12% 55% / 0.25);
-    --glow-primary-hover: 0 0 30px hsl(210 12% 55% / 0.45);
+    /* Glow effects TMA */
+    --glow-primary: 0 0 20px hsl(258 75% 59% / 0.3);
+    --glow-primary-hover: 0 0 35px hsl(258 75% 59% / 0.5);
   }
 }
 
@@ -58,7 +61,9 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
     font-family: 'Inter', sans-serif;
-    background-image: url('/images/hero-bg.png');
+    
+    /* MODIFICATION : Correction du chemin et ajout du gradient sombre */
+    background-image: linear-gradient(rgba(20, 24, 28, 0.85), rgba(20, 24, 28, 0.85)), url('/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -75,6 +80,7 @@
     box-shadow: var(--glow-primary);
   }
   .glow-primary-hover:hover {
+    @apply transition-shadow duration-300;
     box-shadow: var(--glow-primary-hover);
   }
 }

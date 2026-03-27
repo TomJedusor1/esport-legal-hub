@@ -9,7 +9,7 @@ const poles = [
     title: "Engagement et contrat",
     items: [
       "Relecture & analyse de contrat",
-      "Représentation ",
+      "Représentation ",
       "Négociation contractuelle",
       "Gestion de crise & litiges",
       "Veille réglementaire esport",

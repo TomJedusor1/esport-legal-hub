@@ -6,47 +6,47 @@
 
 @layer base {
   :root {
-    --background: 215 18% 14%;
-    --foreground: 210 20% 92%;
+    --background: 215 20% 10%;
+    --foreground: 210 15% 88%;
 
-    --card: 215 18% 16%;
-    --card-foreground: 210 20% 92%;
+    --card: 215 20% 12%;
+    --card-foreground: 210 15% 88%;
 
-    --popover: 215 18% 16%;
-    --popover-foreground: 210 20% 92%;
+    --popover: 215 20% 12%;
+    --popover-foreground: 210 15% 88%;
 
-    --primary: 210 15% 65%;
-    --primary-foreground: 215 18% 10%;
+    --primary: 210 12% 55%;
+    --primary-foreground: 215 20% 8%;
 
-    --secondary: 215 15% 20%;
-    --secondary-foreground: 210 20% 92%;
+    --secondary: 215 18% 16%;
+    --secondary-foreground: 210 15% 88%;
 
-    --muted: 215 15% 20%;
-    --muted-foreground: 210 10% 50%;
+    --muted: 215 18% 16%;
+    --muted-foreground: 210 10% 42%;
 
-    --accent: 210 15% 65%;
-    --accent-foreground: 215 18% 10%;
+    --accent: 210 12% 55%;
+    --accent-foreground: 215 20% 8%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 215 20% 22%;
-    --input: 215 20% 22%;
-    --ring: 210 15% 65%;
+    --border: 215 20% 18%;
+    --input: 215 20% 18%;
+    --ring: 210 12% 55%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 215 18% 12%;
-    --sidebar-foreground: 210 20% 92%;
-    --sidebar-primary: 210 15% 65%;
-    --sidebar-primary-foreground: 215 18% 10%;
-    --sidebar-accent: 215 15% 20%;
-    --sidebar-accent-foreground: 210 20% 92%;
-    --sidebar-border: 215 20% 22%;
-    --sidebar-ring: 210 15% 65%;
+    --sidebar-background: 215 20% 8%;
+    --sidebar-foreground: 210 15% 88%;
+    --sidebar-primary: 210 12% 55%;
+    --sidebar-primary-foreground: 215 20% 8%;
+    --sidebar-accent: 215 18% 16%;
+    --sidebar-accent-foreground: 210 15% 88%;
+    --sidebar-border: 215 20% 18%;
+    --sidebar-ring: 210 12% 55%;
 
-    --glow-primary: 0 0 20px hsl(210 15% 65% / 0.3);
-    --glow-primary-hover: 0 0 30px hsl(210 15% 65% / 0.5);
+    --glow-primary: 0 0 20px hsl(210 12% 55% / 0.25);
+    --glow-primary-hover: 0 0 30px hsl(210 12% 55% / 0.45);
   }
 }
 

@@ -4,7 +4,7 @@ import { ShieldCheck, Lock, Scale } from "lucide-react";
 const values = [
   { icon: ShieldCheck, label: "Transparence totale", desc: "Chaque étape de notre processus vous est communiquée en temps réel." },
   { icon: Lock, label: "Confidentialité", desc: "Vos données et vos contrats sont protégés par un cadre strict de sécurité." },
-  { icon: Scale, label: "Déontologie juridique", desc: "Nos pratiques respectent les standards éthiques les plus exigeants du secteur." },
+  { icon: Scale, label: "Défense de vos intérêts", desc: "Nos pratiques respectent les standards éthiques les plus exigeants du secteur." },
 ];
 
 const EthicsSection = () => {

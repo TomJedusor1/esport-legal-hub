@@ -17,9 +17,9 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg">
       <div className="container flex h-16 items-center justify-between">
         <a href="#" className="flex items-center gap-2 text-foreground">
-          <img src={ucLogo} alt="UC Esport Agency" className="h-8 w-8" />
-          <span className="text-lg font-semibold tracking-tight">UC</span>
-          <span className="text-xs font-medium text-muted-foreground tracking-widest uppercase">Esport Agency</span>
+          <img src={ucLogo} alt="TMA Agency" className="h-8 w-8" />
+          <span className="text-lg font-semibold tracking-tight">TMA</span>
+          <span className="text-xs font-medium text-muted-foreground tracking-widest uppercase">Agency</span>
         </a>
 
         {/* Desktop */}

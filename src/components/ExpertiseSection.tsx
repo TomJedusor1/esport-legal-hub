@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Gavel, Zap, Users } from "lucide-react";
+import { Gavel, Users, UserCheck } from "lucide-react";
 
 const poles = [
   {
@@ -8,10 +8,9 @@ const poles = [
     description: "Protection contractuelle et défense des droits. Analyse approfondie de chaque clause pour sécuriser votre engagement.",
   },
   {
-    icon: Zap,
+    icon: UserCheck, // Référence corrigée (plus de doublon, plus de JSX ici)
     title: "Pôle Influence & Carrière",
-  description: "Affirmez votre identité et maîtrisez votre trajectoire. Nous forgeons votre image de marque et optimisons vos relations avec le management et les sponsors pour une carrière pérenne.",
-  icon: <UserCheck className="w-6 h-6 text-primary" />, // L'icône UserCheck souligne la posture et la validation pro
+    description: "Affirmez votre identité et maîtrisez votre trajectoire. Nous forgeons votre image de marque et optimisons vos relations avec le management et les sponsors pour une carrière pérenne.",
   },
   {
     icon: Users,
@@ -25,7 +24,9 @@ const ExpertiseSection = () => {
     <section id="expertise" className="py-20 md:py-28">
       <div className="container">
         <div className="text-center mb-14">
-          <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">Expertise</p>
+          <p className="text-sm font-medium text-primary uppercase tracking-widest mb-3">
+            Expertise
+          </p>
           <h2 className="text-2xl md:text-3xl font-bold text-foreground">
             Trois pôles, une vision unifiée
           </h2>
@@ -41,7 +42,9 @@ const ExpertiseSection = () => {
                 <CardTitle className="text-lg text-foreground">{p.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-muted-foreground leading-relaxed">{p.description}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {p.description}
+                </p>
               </CardContent>
             </Card>
           ))}

@@ -6,14 +6,14 @@ import { Badge } from "@/components/ui/badge";
 const poles = [
   {
     icon: Scale,
-    title: "Pôle Juridique",
+    title: "Engagement et contrat",
     items: [
       "Relecture & analyse de contrat",
-      "Représentation juridique",
+      "Représentation ",
       "Négociation contractuelle",
       "Gestion de crise & litiges",
       "Veille réglementaire esport",
-      "Conseil en propriété intellectuelle",
+      "Optimisation du sponsoring",
     ],
   },
   {

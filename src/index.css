@@ -1,3 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 215 20% 10%;
+    --foreground: 210 15% 88%;
+    --card: 215 20% 12%;
+    --card-foreground: 210 15% 88%;
+    --popover: 215 20% 12%;
+    --popover-foreground: 210 15% 88%;
+
+    /* Couleurs TMA : Electric Indigo #7C3AED */
+    --primary: 258 75% 59%;
+    --primary-foreground: 210 15% 98%;
+
+    --secondary: 215 18% 16%;
+    --secondary-foreground: 210 15% 88%;
+    --muted: 215 18% 16%;
+    --muted-foreground: 210 10% 42%;
+    --accent: 258 75% 59%;
+    --accent-foreground: 210 15% 98%;
+
+    --border: 215 20% 18%;
+    --input: 215 20% 18%;
+    --ring: 258 75% 59%;
+    --radius: 0.5rem;
+
+    --glow-primary: 0 0 20px hsl(258 75% 59% / 0.3);
+    --glow-primary-hover: 0 0 35px hsl(258 75% 59% / 0.5);
+  }
+}
+
 @layer base {
   * {
     @apply border-border;
@@ -8,31 +44,40 @@
     font-family: 'Inter', sans-serif;
     background-color: #0B0E11; /* Couleur de secours */
     position: relative;
-    min-height: 100vh;
+    overflow-x: hidden;
   }
 
-  /* Nouvelle méthode pour le fond stable sur mobile et desktop */
+  /* --- CALQUE DE FOND OPTIMISÉ --- */
   body::before {
     content: "";
-    position: fixed;
+    position: fixed; /* On fixe le calque, pas l'image elle-même */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: -1; /* Place l'image derrière le contenu */
+    /* Utilisation de dvh pour éviter les sauts lors du scroll mobile */
+    height: 100dvh; 
+    z-index: -1;
     
-    background-image: linear-gradient(rgba(11, 14, 17, 0.85), rgba(11, 14, 17, 0.85)), url('/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
+    background-image: linear-gradient(rgba(11, 14, 17, 0.88), rgba(11, 14, 17, 0.88)), url('/hero-bg.jpg');
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+    /* On force l'attachement à initial pour éviter le bug de zoom iOS */
+    background-attachment: initial; 
+  }
 
-    /* Désactive l'effet fixe uniquement sur les petits écrans si le bug persiste */
-    @media (max-width: 768px) {
-      background-attachment: scroll;
+  /* Ajustements spécifiques pour petits écrans */
+  @media (max-width: 768px) {
+    body::before {
+      /* Sur mobile portrait, on évite que le logo central soit trop envahissant */
+      background-size: cover;
+      background-position: center 40%; /* On remonte un peu l'image pour l'esthétique */
     }
   }
 
-  /* On s'assure que le contenu reste au-dessus */
+  /* Transparence des composants pour laisser voir le fond */
   #root, 
   main, 
   .min-h-screen {
@@ -43,5 +88,15 @@
 
   html {
     scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+  .glow-primary-hover:hover {
+    @apply transition-shadow duration-300;
+    box-shadow: var(--glow-primary-hover);
   }
 }

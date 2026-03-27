@@ -2,9 +2,9 @@ import { Badge } from "@/components/ui/badge";
 import { ShieldCheck, Lock, Scale } from "lucide-react";
 
 const values = [
-  { icon: ShieldCheck, label: "Transparence totale", desc: "Chaque étape de notre processus vous est communiquée en temps réel." },
-  { icon: Lock, label: "Confidentialité", desc: "Vos données et vos contrats sont protégés par un cadre strict de sécurité." },
-  { icon: Scale, label: "Défense de vos intérêts", desc: "Nos pratiques respectent les standards éthiques les plus exigeants du secteur." },
+  { icon: ShieldCheck, label: "Disponibilité et efficacité", desc: "Nous nous engageons à une disponibilité constante et à une réponse systématique sous 48 heures pour toute sollicitation, qu'elle soit d'ordre contractuelle, sportive ou logistique. Cette rigueur opérationnelle garantit qu'aucune opportunité de marché n'est manquée et que chaque problématique est traitée avec la célérité qu'exige le haut niveau. Notre structure est dimensionnée pour offrir un suivi personnalisé, transformant la réactivité en un levier de sécurité et de performance pour votre carrière." },
+  { icon: Lock, label: "Confidentialité", desc: "Chaque donnée personnelle, détail contractuel ou axe stratégique de carrière est soumis à une méthodologie de traitement rigoureuse et cloisonnée. Cette approche garantit une étanchéité totale vis-à-vis des tiers et des structures concurrentes, sécurisant ainsi l'intégrité de vos négociations et la pérennité de votre avantage compétitif sur le marché du transfert." },
+  { icon: Scale, label: "Défense de vos intérêts", desc: "Une négociation contractuelle rigoureuse visant à sécuriser et maximiser vos revenus et développement de votre image de marque auprès des sponsors. Au-delà de l'aspect financier, nous intervenons pour garantir un environnement de performance optimal au sein de votre structure (conditions d'entraînement, respect des engagements logistiques, qualité de vie), considérant que la pérennité de vos résultats sportifs est indissociable d'un cadre de travail sain et respecté." },
 ];
 
 const EthicsSection = () => {

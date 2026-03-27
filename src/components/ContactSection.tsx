@@ -96,6 +96,18 @@ const ContactSection = () => {
                 {errors.situation && <p className="text-xs text-destructive">{errors.situation}</p>}
               </div>
 
+              {/* Message */}
+              <div className="space-y-2">
+                <Label htmlFor="message" className="text-foreground text-sm">Objet de votre demande</Label>
+                <Textarea
+                  id="message"
+                  name="message"
+                  placeholder="Décrivez brièvement la nature de votre demande (audit contractuel, recherche d'opportunités, accompagnement juridique…)"
+                  rows={4}
+                  className="bg-secondary border-border text-foreground placeholder:text-muted-foreground resize-none"
+                />
+              </div>
+
               {/* Drop zone */}
               <div className="space-y-2">
                 <Label className="text-foreground text-sm">Contrat (PDF)</Label>

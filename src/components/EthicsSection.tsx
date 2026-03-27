@@ -13,7 +13,7 @@ const EthicsSection = () => {
       <div className="container max-w-4xl">
         <div className="text-center mb-12">
           <Badge variant="outline" className="border-primary/40 text-primary mb-4">
-            Engagement
+            Vos garaties
           </Badge>
           <h2 className="text-2xl md:text-3xl font-bold text-foreground">
             Notre charte éthique

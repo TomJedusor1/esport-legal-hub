@@ -6,13 +6,13 @@ import { Badge } from "@/components/ui/badge";
 const poles = [
   {
     icon: Scale,
-    title: "Engagement et contrat",
+    title: "Accompagnement juridique",
     items: [
-      "Relecture & analyse de contrat",
-      "Représentation ",
+      "Assuré par un professionnel du droit",
+      "Analyse et optimisation des contrats",
       "Négociation contractuelle",
-      "Gestion de crise & litiges",
-      "Veille réglementaire esport",
+      "Gestion de litiges",
+      "Représentation",
       "Optimisation du sponsoring",
     ],
   },
@@ -29,13 +29,13 @@ const poles = [
   },
   {
     icon: Target,
-    title: "Mercato & Image",
+    title: "Transferts Mercato",
     items: [
-      "Identification d'opportunités",
       "Création d'opportunités de transfert",
-      "Conseil d'orientation de carrière",
-      "Construction de l'image du joueur",
-      "Personal branding & visibilité",
+      "Analyse permanente du marché",
+      "Suivi tout au long de votre carrière",
+      "Contact permanent avec de nombreux clubs e-sport",
+      "Du Nexus Tour à la LFL - LEC à venir",
     ],
   },
 ];

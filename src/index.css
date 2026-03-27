@@ -1,81 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  :root {
-    --background: 215 20% 10%;
-    --foreground: 210 15% 88%;
-
-    --card: 215 20% 12%;
-    --card-foreground: 210 15% 88%;
-
-    --popover: 215 20% 12%;
-    --popover-foreground: 210 15% 88%;
-
-    /* Electric Indigo #7C3AED */
-    --primary: 258 75% 59%; 
-    --primary-foreground: 210 15% 98%;
-
-    --secondary: 215 18% 16%;
-    --secondary-foreground: 210 15% 88%;
-
-    --muted: 215 18% 16%;
-    --muted-foreground: 210 10% 42%;
-
-    --accent: 258 75% 59%;
-    --accent-foreground: 210 15% 98%;
-
-    --border: 215 20% 18%;
-    --input: 215 20% 18%;
-    --ring: 258 75% 59%;
-
-    --radius: 0.5rem;
-
-    --glow-primary: 0 0 20px hsl(258 75% 59% / 0.3);
-    --glow-primary-hover: 0 0 35px hsl(258 75% 59% / 0.5);
-  }
-}
-
 @layer base {
   * {
     @apply border-border;
   }
 
   body {
-    /* On retire bg-background ici pour éviter les conflits et on force le noir en fallback */
     @apply text-foreground font-sans antialiased;
     font-family: 'Inter', sans-serif;
-    background-color: #0B0E11; 
+    background-color: #0B0E11; /* Couleur de secours */
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* Nouvelle méthode pour le fond stable sur mobile et desktop */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place l'image derrière le contenu */
     
-    /* Application de l'image avec l'overlay de lisibilité */
     background-image: linear-gradient(rgba(11, 14, 17, 0.85), rgba(11, 14, 17, 0.85)), url('/hero-bg.jpg');
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     background-repeat: no-repeat;
+
+    /* Désactive l'effet fixe uniquement sur les petits écrans si le bug persiste */
+    @media (max-width: 768px) {
+      background-attachment: scroll;
+    }
   }
 
-  /* FORCE LA TRANSPARENCE DES CONTENEURS REACT */
+  /* On s'assure que le contenu reste au-dessus */
   #root, 
   main, 
   .min-h-screen {
     background-color: transparent !important;
+    position: relative;
+    z-index: 1;
   }
 
   html {
     scroll-behavior: smooth;
-  }
-}
-
-@layer utilities {
-  .glow-primary {
-    box-shadow: var(--glow-primary);
-  }
-  .glow-primary-hover:hover {
-    @apply transition-shadow duration-300;
-    box-shadow: var(--glow-primary-hover);
   }
 }

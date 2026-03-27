@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Shield, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import ucLogo from "@/assets/uc-logo.png";
 
 const navLinks = [
   { label: "Expertise", href: "#expertise" },
@@ -16,7 +17,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-lg">
       <div className="container flex h-16 items-center justify-between">
         <a href="#" className="flex items-center gap-2 text-foreground">
-          <Shield size={24} strokeWidth={1.5} className="text-primary" />
+          <img src={ucLogo} alt="UC Esport Agency" className="h-8 w-8" />
           <span className="text-lg font-semibold tracking-tight">UC</span>
           <span className="text-xs font-medium text-muted-foreground tracking-widest uppercase">Esport Agency</span>
         </a>

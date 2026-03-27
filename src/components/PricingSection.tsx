@@ -18,13 +18,13 @@ const poles = [
   },
   {
     icon: Gamepad2,
-    title: "Coaching & Mentoring",
+    title: "Développement de carrière",
     items: [
-      "Conseil stratégique in-game",
-      "Analyse de performance",
+      "Accompagnement par un ancien joueur pro",
       "Préparation mentale",
-      "Accompagnement par un ancien pro",
-      "Développement de carrière",
+      "Gestion de crise",
+      "Personal branding",
+      "Orientation stratégique",
     ],
   },
   {

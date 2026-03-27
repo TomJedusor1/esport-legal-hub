@@ -58,7 +58,7 @@ const PricingSection = () => {
         <Card className="bg-card border-primary/30 max-w-lg mx-auto mb-16">
           <CardHeader className="text-center pb-2">
             <Badge variant="outline" className="w-fit mx-auto mb-3 border-primary/40 text-primary text-xs">
-              Commission au succès
+              Gratuit pour les joueurs sans contrat. Payant pour les joueurs sous contrat.
             </Badge>
             <CardTitle className="text-foreground text-3xl md:text-4xl font-bold">
               5 % – 15 %

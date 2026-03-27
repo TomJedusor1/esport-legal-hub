@@ -15,7 +15,7 @@
     --popover: 215 20% 12%;
     --popover-foreground: 210 15% 88%;
 
-    /* CHANGEMENT : Electric Indigo #7C3AED (en HSL) */
+    /* Electric Indigo #7C3AED */
     --primary: 258 75% 59%; 
     --primary-foreground: 210 15% 98%;
 
@@ -28,26 +28,12 @@
     --accent: 258 75% 59%;
     --accent-foreground: 210 15% 98%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
-
     --border: 215 20% 18%;
     --input: 215 20% 18%;
     --ring: 258 75% 59%;
 
     --radius: 0.5rem;
 
-    /* Sidebar & Glows */
-    --sidebar-background: 215 20% 8%;
-    --sidebar-foreground: 210 15% 88%;
-    --sidebar-primary: 258 75% 59%;
-    --sidebar-primary-foreground: 210 15% 98%;
-    --sidebar-accent: 215 18% 16%;
-    --sidebar-accent-foreground: 210 15% 88%;
-    --sidebar-border: 215 20% 18%;
-    --sidebar-ring: 258 75% 59%;
-
-    /* Glow effects TMA */
     --glow-primary: 0 0 20px hsl(258 75% 59% / 0.3);
     --glow-primary-hover: 0 0 35px hsl(258 75% 59% / 0.5);
   }
@@ -59,15 +45,24 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    /* On retire bg-background ici pour éviter les conflits et on force le noir en fallback */
+    @apply text-foreground font-sans antialiased;
     font-family: 'Inter', sans-serif;
+    background-color: #0B0E11; 
     
-    /* MODIFICATION : Correction du chemin et ajout du gradient sombre */
-    background-image: linear-gradient(rgba(20, 24, 28, 0.85), rgba(20, 24, 28, 0.85)), url('/hero-bg.jpg');
+    /* Application de l'image avec l'overlay de lisibilité */
+    background-image: linear-gradient(rgba(11, 14, 17, 0.85), rgba(11, 14, 17, 0.85)), url('/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     background-repeat: no-repeat;
+  }
+
+  /* FORCE LA TRANSPARENCE DES CONTENEURS REACT */
+  #root, 
+  main, 
+  .min-h-screen {
+    background-color: transparent !important;
   }
 
   html {

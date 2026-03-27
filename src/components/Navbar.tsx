@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="container flex h-16 items-center justify-between">
         <a href="#" className="flex items-center gap-2 text-foreground">
           <img src={ucLogo} alt="Talent Management Agency" className="h-8 w-8" />
-          <span className="text-lg font-semibold tracking-tight">TMA</span>
+          <span className="text-lg font-semibold tracking-tight text-muted-foreground">TMA</span>
           <span className="text-xs font-medium text-muted-foreground tracking-widest uppercase">Talent Management Agency</span>
         </a>
 

@@ -4,32 +4,12 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Upload } from "lucide-react";
-import { useState, useCallback, type FormEvent, type DragEvent } from "react";
+import { useState, type FormEvent } from "react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
   const { toast } = useToast();
-  const [dragActive, setDragActive] = useState(false);
-  const [fileName, setFileName] = useState<string | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
-
-  const handleDrag = useCallback((e: DragEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setDragActive(e.type === "dragenter" || e.type === "dragover");
-  }, []);
-
-  const handleDrop = useCallback((e: DragEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    setDragActive(false);
-    const file = e.dataTransfer.files?.[0];
-    if (file?.type === "application/pdf") {
-      setFileName(file.name);
-      setErrors((prev) => ({ ...prev, file: "" }));
-    }
-  }, []);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -96,7 +76,6 @@ const ContactSection = () => {
                 {errors.situation && <p className="text-xs text-destructive">{errors.situation}</p>}
               </div>
 
-              {/* Message */}
               <div className="space-y-2">
                 <Label htmlFor="message" className="text-foreground text-sm">Objet de votre demande</Label>
                 <Textarea
@@ -106,37 +85,6 @@ const ContactSection = () => {
                   rows={4}
                   className="bg-secondary border-border text-foreground placeholder:text-muted-foreground resize-none"
                 />
-              </div>
-
-              {/* Drop zone */}
-              <div className="space-y-2">
-                <Label className="text-foreground text-sm">Contrat (PDF)</Label>
-                <div
-                  onDragEnter={handleDrag}
-                  onDragLeave={handleDrag}
-                  onDragOver={handleDrag}
-                  onDrop={handleDrop}
-                  className={`border-2 border-dashed rounded-lg p-8 text-center transition-colors cursor-pointer ${
-                    dragActive ? "border-primary bg-primary/5" : "border-border"
-                  }`}
-                  onClick={() => {
-                    const input = document.createElement("input");
-                    input.type = "file";
-                    input.accept = ".pdf";
-                    input.onchange = (e) => {
-                      const file = (e.target as HTMLInputElement).files?.[0];
-                      if (file) setFileName(file.name);
-                    };
-                    input.click();
-                  }}
-                >
-                  <Upload size={24} strokeWidth={1.5} className="mx-auto text-muted-foreground mb-2" />
-                  {fileName ? (
-                    <p className="text-sm text-foreground">{fileName}</p>
-                  ) : (
-                    <p className="text-sm text-muted-foreground">Glissez votre contrat ici ou cliquez pour parcourir</p>
-                  )}
-                </div>
               </div>
 
               <Button type="submit" variant="cta" className="w-full">

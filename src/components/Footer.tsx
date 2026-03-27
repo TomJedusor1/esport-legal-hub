@@ -1,4 +1,4 @@
-import { Shield } from "lucide-react";
+import ucLogo from "@/assets/uc-logo.png";
 
 const Footer = () => (
   <footer className="border-t border-border py-10">

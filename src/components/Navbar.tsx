@@ -17,8 +17,8 @@ const Navbar = () => {
       <div className="container flex h-16 items-center justify-between">
         <a href="#" className="flex items-center gap-2 text-foreground">
           <Shield size={24} strokeWidth={1.5} className="text-primary" />
-          <span className="text-lg font-semibold tracking-tight">NEXUS</span>
-          <span className="text-xs font-medium text-muted-foreground tracking-widest uppercase">Esport</span>
+          <span className="text-lg font-semibold tracking-tight">UC</span>
+          <span className="text-xs font-medium text-muted-foreground tracking-widest uppercase">Esport Agency</span>
         </a>
 
         {/* Desktop */}

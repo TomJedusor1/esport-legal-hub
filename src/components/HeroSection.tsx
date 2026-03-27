@@ -15,7 +15,7 @@ const HeroSection = () => {
           <span className="text-primary">optimiser votre performance.</span>
         </h1>
         <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-          L'alliance inédite du droit, de l'expérience terrain et du management de haut niveau pour les talents de l'Esport.
+          Talent Management Agency — l'alliance inédite du droit, de l'expérience terrain et du management de haut niveau pour les talents de l'Esport.
         </p>
         <div className="mt-10">
           <Button variant="ctaLarge" size="lg" asChild>

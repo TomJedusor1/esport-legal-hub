@@ -9,8 +9,9 @@ const poles = [
   },
   {
     icon: Zap,
-    title: "Pôle Performance",
-    description: "Analyse technique et coaching personnalisé. Optimisation de vos performances avec des métriques clés.",
+    title: "Pôle Influence & Carrière",
+  description: "Affirmez votre identité et maîtrisez votre trajectoire. Nous forgeons votre image de marque et optimisons vos relations avec le management et les sponsors pour une carrière pérenne.",
+  icon: <UserCheck className="w-6 h-6 text-primary" />, // L'icône UserCheck souligne la posture et la validation pro
   },
   {
     icon: Users,

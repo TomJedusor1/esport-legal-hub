@@ -59,7 +59,7 @@
     height: 100dvh; 
     z-index: -1;
     
-    background-image: linear-gradient(rgba(11, 14, 17, 0.88), rgba(11, 14, 17, 0.88)), url('/hero-bg.jpg');
+    background-image: linear-gradient(rgba(11, 14, 17, 0.55), rgba(11, 14, 17, 0.55)), url('/hero-bg.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
